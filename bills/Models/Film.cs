@@ -13,12 +13,12 @@ namespace bills.Models
         public int Id { get; set; }
         public int Duration { get; set; }
 
-        public virtual ICollection<Seans> Seans { get; set; }
-        public string image { get; set; }
+        public virtual ICollection<Seans> seans { get; set; }
+        public string ImagePath { get; set; }
 
         public Film()
         {
-            Seans = new List<Seans>();
+            seans = new List<Seans>();
         }
     }
 }

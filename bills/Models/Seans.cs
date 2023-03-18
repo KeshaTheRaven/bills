@@ -10,13 +10,13 @@ namespace bills.Models
     {
         public int Id { get; set; }
         public int ZalId { get; set; }
-        public virtual Zal zal { get; set; }
+        public virtual Zal Zal { get; set; }
 
         public int Cost { get; set; }
 
         public int FilmId { get; set; }
 
-        public virtual Film film { get; set; }
+        public virtual Film Film { get; set; }
 
         public DateTime Date { get; set; }
     }

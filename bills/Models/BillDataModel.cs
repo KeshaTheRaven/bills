@@ -8,8 +8,13 @@ using System.Threading.Tasks;
 
 namespace bills.Models
 {
+    
     public class BillDataModel : DbContext
     {
+        static BillDataModel()
+        {
+            Database.SetInitializer<BillDataModel>(new Ini());
+        }
         public BillDataModel() 
             :base("name=BillDataModel")
         {

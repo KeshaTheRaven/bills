@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Models\Cinema.cs" />
     <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\Ini.cs" />
     <Compile Include="Models\Seans.cs" />
     <Compile Include="Models\BillDataModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -112,6 +113,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\9da0fdd99fac16a0f238fec9cdb4fad1.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\b86d5208a8f768fa5024e76546f8cd0c.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\looper-movie-poster-9r-2560x1600.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
