@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bills"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="205*"/>
@@ -27,25 +27,12 @@
         </Grid.RowDefinitions>
         <Button Content="Начать" HorizontalAlignment="Left" Grid.Row="6" Margin="70,11,0,7" Width="43" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="16" Width="152"><Run Text="Название "/><Run Language="ru-ru" Text="Кинотеатра:"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="33"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,14,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Номер Тел." VerticalAlignment="Top" Grid.Column="1" Height="16" Width="62"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Число посадочных мест" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="132"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,13,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Директор" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="54"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Владелец" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="52"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Банк" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="52"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="7" TextWrapping="Wrap" Text="Номер счета" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="95"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="8" TextWrapping="Wrap" Text="ИНН" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="95"/>
-
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="4" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="5" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="6" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="7" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Center" Height="16" Grid.Row="8" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="52" RenderTransformOrigin="-1.135,-2.302" Grid.Column="2"/>
-        <ComboBox Margin="22,46,44,10" Grid.Row="1" Grid.RowSpan="2" x:Name="nameCB">
+        <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="62"/>
+        <ComboBox Margin="22,46,44,10" Grid.Row="1" Grid.RowSpan="2" x:Name="nameCB" SelectionChanged="nameCB_SelectionChanged">
 
         </ComboBox>
+        <TextBlock x:Name="tbr" TextWrapping="Wrap" Text="{Binding}" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,37,10,0" Grid.RowSpan="5" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="79"><Run Language="ru-ru" Text="Расписание"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        <TextBlock TextWrapping="Wrap" Text="TextBlock" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,9,184,10" Grid.Row="1"/>
     </Grid>
 </Window>

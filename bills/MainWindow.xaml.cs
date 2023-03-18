@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bills.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,28 +24,21 @@ namespace bills
         public MainWindow()
         {
             InitializeComponent();
-            nameCB.ItemsSource = new Cinema[]
-            {
-                new Cinema{ Name = "Москва", Description = "Some Cinema" },
-                new Cinema{ Name = "Заря", Description = "Some Cinema" },
-                new Cinema{ Name = "Дружба", Description = "Some Cinema" }, 
-            };
-            nameCB.SelectedIndex = 0;
+            
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (nameCB.SelectedIndex == 0)
-            {
-                
-            }
+            BillDataModel model = new BillDataModel();
+            model.Films.ToArray();
+
+            
+        }
+
+        private void nameCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
-}
-public class Cinema
-{
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public override string ToString() => $"{Name} ({Description})";
 }
