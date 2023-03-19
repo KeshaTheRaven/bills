@@ -24,21 +24,24 @@ namespace bills
         public MainWindow()
         {
             InitializeComponent();
+
+            BillDataModel model = new BillDataModel();
+            model.Films.ToArray();
+            CinemasCB.ItemsSource= model.Cinemas.ToArray();
+
+            
             
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BillDataModel model = new BillDataModel();
-            model.Films.ToArray();
-
             
         }
 
-        private void nameCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CinemasCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var Cinema = (Cinema)CinemasCB.SelectedItem;
         }
     }
 }
