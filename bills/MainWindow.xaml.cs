@@ -1,6 +1,7 @@
 ﻿using bills.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,12 +22,14 @@ namespace bills
     /// </summary>
     public partial class MainWindow : Window
     {
+        BillDataModel model = new BillDataModel();
         public MainWindow()
         {
             InitializeComponent();
 
-            BillDataModel model = new BillDataModel();
+            
             model.Films.ToArray();
+            
             CinemasCB.ItemsSource= model.Cinemas.ToArray();
 
             
@@ -42,6 +45,11 @@ namespace bills
         private void CinemasCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var Cinema = (Cinema)CinemasCB.SelectedItem;
+
+            var result = model.Zals.Where(s => s.CinemaId == Cinema.Id).ToArray();
+            tbr.Text = result.ToString();
+
+
         }
     }
 }
