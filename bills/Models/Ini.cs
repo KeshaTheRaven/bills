@@ -109,6 +109,25 @@ namespace bills.Models
                 Id = 3,
             };
 
+            Zal z4 = new Zal()
+            {
+                ZalName = "1",
+                Id = 4,
+
+            };
+
+            Zal z5 = new Zal()
+            {
+                ZalName = "2",
+                Id = 5,
+            };
+
+            Zal z6 = new Zal()
+            {
+                ZalName = "3",
+                Id = 6,
+            };
+
 
             Cinema c1 = new Cinema()
             {
@@ -122,7 +141,7 @@ namespace bills.Models
                 CinemaName = "Kва",
                 Adresse = "ул.Сталина",
                 Zals = new List<Zal>()
-                { z1,z2,z3 }
+                { z4,z5,z6 }
             };
             db.Cinemas.Add(c1);
             db.Cinemas.Add(c2);

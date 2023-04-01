@@ -29,10 +29,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="22,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="16" Width="152"><Run Text="Название "/><Run Language="ru-ru" Text="Кинотеатра:"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="24,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Адрес" VerticalAlignment="Center" Grid.Column="1" Height="16" Width="62"/>
         <ComboBox Margin="22,46,44,10" Grid.Row="1" Grid.RowSpan="2" x:Name="CinemasCB" SelectionChanged="CinemasCB_SelectionChanged" DisplayMemberPath="CinemaName">
-            
         </ComboBox>
         <TextBlock x:Name="tbr" TextWrapping="Wrap" Text="{Binding}" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,37,10,0" Grid.RowSpan="5" Grid.Row="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="79"><Run Language="ru-ru" Text="Расписание"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
         <TextBlock TextWrapping="Wrap" Text="TextBlock" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,9,184,10" Grid.Row="1"/>
+        <ListBox x:Name="LB" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,4,10,4" Grid.Row="3" SelectionChanged="LB_SelectionChanged" Grid.RowSpan="2" DisplayMemberPath="ZalName"/>
     </Grid>
 </Window>
