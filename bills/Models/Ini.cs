@@ -18,6 +18,7 @@ namespace bills.Models
             Film f1 = new Film()
             {
                 FilmName = "Пролетая на гнездом кукушки.",
+                Id = 1,
                 Duration = 65,
                 ImagePath = @"Images\9da0fdd99fac16a0f238fec9cdb4fad1.jpeg",
                 seans = new List<Seans>()
@@ -43,6 +44,7 @@ namespace bills.Models
             Film f2 = new Film()
             {
                 FilmName = "Форсаж",
+                Id = 2,
                 Duration = 65,
                 ImagePath = @"Images\b86d5208a8f768fa5024e76546f8cd0c.jpeg",
                 seans = new List <Seans>()
@@ -67,6 +69,7 @@ namespace bills.Models
             Film f3 = new Film()
             {
                 FilmName = "Дом",
+                Id = 3,
                 Duration = 65,
                 ImagePath = @"Images\looper-movie-poster-9r-2560x1600.jpg",
                 seans= new List<Seans>()

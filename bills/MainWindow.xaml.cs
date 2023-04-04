@@ -28,6 +28,8 @@ namespace bills
             InitializeComponent();
 
             model.Films.ToArray();
+
+            
             
             CinemasCB.ItemsSource= model.Cinemas.ToArray();
   
@@ -36,7 +38,14 @@ namespace bills
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            var ZalID = LB.SelectedIndex;
+            var SSeans = model.Seanses.Where(s => s.ZalId == ZalID).ToArray();
+            
+            
+            
+            
+            
+
         }
 
         private void CinemasCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -45,8 +54,18 @@ namespace bills
             var Cinema = (Cinema)CinemasCB.SelectedItem;
 
             var SZals = model.Zals.Where(s => s.CinemaId == Cinema.Id).ToArray();
-
+            
             LB.ItemsSource = SZals;
+
+            FilmCB.ItemsSource = model.Films.ToArray();
+
+
+
+
+
+            //var Seans = SSeans.Where(s => s.)
+
+            //tbr.Text = ;
 
             //for (int i = 0; i < SZals.Length; i++) 
             //{
@@ -58,7 +77,7 @@ namespace bills
 
             //var Seanses = model.Seanses.Where(s => s.ZalId == ID).ToArray();
 
-            //tbr.Text = Seanses.ToString();
+
 
 
         }
