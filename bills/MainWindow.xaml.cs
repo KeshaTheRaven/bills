@@ -28,21 +28,14 @@ namespace bills
             InitializeComponent();
 
             model.Films.ToArray();
-
-            
             
             CinemasCB.ItemsSource= model.Cinemas.ToArray();
-  
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var ZalID = LB.SelectedIndex;
-            var SSeans = model.Seanses.Where(s => s.ZalId == ZalID).ToArray();
-            
-            
-            
+
             
             
 
@@ -50,17 +43,16 @@ namespace bills
 
         private void CinemasCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-            var Cinema = (Cinema)CinemasCB.SelectedItem;
-
-            var SZals = model.Zals.Where(s => s.CinemaId == Cinema.Id).ToArray();
-            
-            LB.ItemsSource = SZals;
-
             FilmCB.ItemsSource = model.Films.ToArray();
+            Ras.ItemsSource = model.Seanses.ToArray();
 
+            //var Cinema = (Cinema)CinemasCB.SelectedItem;
 
+            //var SZals = model.Zals.Where(s => s.CinemaId == Cinema.Id).ToArray();
 
+            //LB.ItemsSource = SZals;
+
+            //var FImage = (Film)FilmCB.SelectedItem;
 
 
             //var Seans = SSeans.Where(s => s.)
@@ -78,8 +70,6 @@ namespace bills
             //var Seanses = model.Seanses.Where(s => s.ZalId == ID).ToArray();
 
 
-
-
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -92,6 +82,9 @@ namespace bills
 
         }
 
-        
+        private void FilmCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }
