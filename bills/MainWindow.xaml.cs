@@ -37,21 +37,21 @@ namespace bills
         {
 
             
+            int FID = FilmCB.SelectedIndex;
+            int Zal = LB.SelectedIndex;
+            var Sseans = model.Seanses.Where(s => s.ZalId == Zal || s.FilmId == FID);
+
             
+            Ras.ItemsSource = Sseans.ToArray();
+            
+
 
         }
 
         private void CinemasCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FilmCB.ItemsSource = model.Films.ToArray();
-            Ras.ItemsSource = model.Seanses.ToArray();
-
-            //var Cinema = (Cinema)CinemasCB.SelectedItem;
-
-            //var SZals = model.Zals.Where(s => s.CinemaId == Cinema.Id).ToArray();
-
-            //LB.ItemsSource = SZals;
-
+            
             //var FImage = (Film)FilmCB.SelectedItem;
 
 
@@ -85,6 +85,7 @@ namespace bills
         private void FilmCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+           
         }
     }
 }
