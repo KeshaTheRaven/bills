@@ -39,10 +39,10 @@ namespace bills
             
             int FID = FilmCB.SelectedIndex;
             int Zal = LB.SelectedIndex;
-            var Sseans = model.Seanses.Where(s => s.ZalId == Zal || s.FilmId == FID);
+            var Sseans = model.Seanses.Where(s => s.ZalId == Zal && s.FilmId == FID);
 
             
-            Ras.ItemsSource = Sseans.ToArray();
+            dgRas.ItemsSource = Sseans.ToArray();
             
 
 
@@ -86,6 +86,24 @@ namespace bills
         {
             
            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddWindow addWindow = new AddWindow(model, null);
+            addWindow.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AddWindow addWindow = new AddWindow(model, _selectedSeans);
+            addWindow.Show();
+        }
+
+        Seans _selectedSeans;
+        private void dgRas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _selectedSeans = dgRas.SelectedItem as Seans;
         }
     }
 }
