@@ -24,6 +24,7 @@ namespace bills
         BillDataModel _model;
         public Window2(BillDataModel model, Film film)
         {
+            
             _film = film;
             _model = model;
             InitializeComponent();
@@ -33,10 +34,12 @@ namespace bills
                 FilmDuration.Text = film.Duration.ToString();
                 FilmPath.Text = film.ImagePath.ToString();
             }
+            
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
+            Film _film = new Film();
             int duration = Convert.ToInt32(FilmDuration.Text);
             _film.FilmName = FilmName.Text;
             _film.Duration = duration;
