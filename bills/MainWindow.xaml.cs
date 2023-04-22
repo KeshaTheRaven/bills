@@ -84,8 +84,8 @@ namespace bills
 
         private void FilmCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-           
+            _selectedFilm = FilmCB.SelectedItem as Film;
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -99,11 +99,23 @@ namespace bills
             AddWindow addWindow = new AddWindow(model, _selectedSeans);
             addWindow.Show();
         }
-
+        Film _selectedFilm;
         Seans _selectedSeans;
         private void dgRas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             _selectedSeans = dgRas.SelectedItem as Seans;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Window1 window1 = new Window1(model);
+            window1.Show();
+        }
+
+        private void FilmAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 window2 = new Window2(model, _selectedFilm);
+            window2.Show();
         }
     }
 }

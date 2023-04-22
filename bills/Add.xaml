@@ -22,7 +22,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="72,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"><Run Language="en-au" Text="Film"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="72,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"><Run Language="en-au" Text="Date"/><LineBreak/><Run Language="en-au"/></TextBlock>
         <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="97,28,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox x:Name="tbCost" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="145,61,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbCost" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="145,61,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="Zal" Grid.Column="1" HorizontalAlignment="Left" Margin="145,25,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" DisplayMemberPath="ZalName" />
         <ComboBox x:Name="FilmCB" Grid.Column="1" HorizontalAlignment="Left" Margin="145,89,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" DisplayMemberPath="FilmName" />
         <DatePicker x:Name="DatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="145,124,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="120"/>

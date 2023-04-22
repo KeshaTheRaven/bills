@@ -1,0 +1,31 @@
+﻿<Window x:Class="bills.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bills"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="156*"/>
+            <RowDefinition Height="135*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="Nametb" HorizontalAlignment="Left" Margin="120,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-au" Text="Name"/></TextBlock>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="140,68,0,0" VerticalAlignment="Top" Click="Save" Grid.Row="2"/>
+        <TextBox  x:Name="Adressetb" HorizontalAlignment="Left" Margin="120,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-au" Text="Adresse"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="128,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" Height="16" Grid.Column="1"><Run Language="en-au" Text="Zals"/><LineBreak/><Run Language="en-au"/></TextBlock>
+        <ListBox x:Name="ZalsLB" ItemsSource="{Binding}" DisplayMemberPath="ZalName" Margin="194,109,107,38" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" SelectionChanged="ZalsLB_SelectionChanged" />
+        <Button Content="+&#xD;&#xA;" HorizontalAlignment="Left" Margin="234,144,0,0" VerticalAlignment="Top" Width="36" Height="20" Click="AddZal" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="80,144,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Height="20" Width="50" Click="Del"/>
+
+    </Grid>
+</Window>

@@ -44,6 +44,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -71,6 +72,12 @@
     <Compile Include="Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CinemaADD.xaml.cs">
+      <DependentUpon>CinemaADD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FilmAdd.xaml.cs">
+      <DependentUpon>FilmAdd.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -89,6 +96,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CinemaADD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FilmAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

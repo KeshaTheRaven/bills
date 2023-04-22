@@ -1,0 +1,19 @@
+﻿<Window x:Class="bills.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bills"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="FilmName" HorizontalAlignment="Left" Margin="400,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FilmDuration" HorizontalAlignment="Left" Margin="400,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FilmPath" HorizontalAlignment="Left" Margin="400,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="273,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-au" Text="Name"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="273,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-au" Text="Duration"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="273,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-au" Text="ImagePath"/><LineBreak/><Run Language="en-au"/></TextBlock>
+        <Button x:Name="Save" Content="Сохранить" HorizontalAlignment="Center" Margin="0,315,0,0" VerticalAlignment="Top" Click="Save_Click"/>
+
+    </Grid>
+</Window>
